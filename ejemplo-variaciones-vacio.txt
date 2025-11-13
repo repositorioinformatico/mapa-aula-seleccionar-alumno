@@ -1,0 +1,19 @@
+Alumno01
+vacío
+Alumno02
+
+VACIO
+Alumno03
+Vacía
+
+mesa vacía
+Alumno04
+MESA VACIA
+
+Vacio
+Alumno05
+Mesa Vacío
+
+VACÍA
+Alumno06
+vacia

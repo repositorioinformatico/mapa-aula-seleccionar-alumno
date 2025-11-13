@@ -1,0 +1,535 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --success-color: #000000;
+    --danger-color: #000000;
+    --warning-color: #666666;
+    --bg-color: #f5f5f5;
+    --card-bg: #ffffff;
+    --text-color: #000000;
+    --text-muted: #666666;
+    --border-color: #cccccc;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 20px;
+    background: #000000;
+    color: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 3px solid #000000;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Card */
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.input-group textarea,
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.input-group textarea:focus,
+.input-group input:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.input-group.inline {
+    display: inline-block;
+    margin-right: 20px;
+    width: auto;
+}
+
+.input-group.inline input {
+    width: 100px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-primary {
+    background-color: #000000;
+    color: white;
+    border: 2px solid #000000;
+}
+
+.btn-primary:hover {
+    background-color: #333333;
+    border-color: #333333;
+}
+
+.btn-success {
+    background-color: #000000;
+    color: white;
+    font-size: 1.1em;
+    padding: 15px 30px;
+    border: 2px solid #000000;
+}
+
+.btn-success:hover {
+    background-color: #333333;
+    border-color: #333333;
+}
+
+.btn-secondary {
+    background-color: #666666;
+    color: white;
+    border: 2px solid #666666;
+}
+
+.btn-secondary:hover {
+    background-color: #888888;
+    border-color: #888888;
+}
+
+/* Info Text */
+.info-text {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-left: 4px solid #000000;
+    border-radius: 4px;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* Layout Controls */
+.layout-controls {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Classroom Controls */
+.classroom-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* Classroom Grid */
+#classroom-grid {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    min-height: 300px;
+    border: 2px solid #e0e0e0;
+}
+
+/* Desk */
+.desk {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95em;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    word-wrap: break-word;
+}
+
+.desk:not(.empty):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #000000;
+}
+
+.desk.empty {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    color: var(--text-muted);
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.desk.selecting {
+    animation: pulse 0.5s ease-in-out;
+    background: linear-gradient(135deg, #e0e0e0, #d0d0d0);
+    border-color: #666666;
+    transform: scale(1.05);
+}
+
+.desk.selected {
+    animation: selectedPulse 0.8s ease-in-out;
+    background: #000000;
+    color: white;
+    border-color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    font-size: 1.1em;
+}
+
+/* Drag and Drop Styles */
+.desk.draggable {
+    cursor: move;
+    cursor: grab;
+}
+
+.desk.draggable:active {
+    cursor: grabbing;
+}
+
+.desk.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+    border: 2px dashed #666666;
+    background: #f0f0f0;
+}
+
+.desk.drag-over {
+    border: 3px dashed #000000;
+    background: #e8e8e8;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.desk.drag-over.empty {
+    background: #d8d8d8;
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes selectedPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Selected Student Display */
+.selected-student {
+    background: #000000;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    animation: slideIn 0.5s ease-out;
+    border: 3px solid #000000;
+}
+
+.selected-student h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.selected-student p {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Instructions */
+.instructions {
+    background: #f8f8f8;
+    border-left: 4px solid #333333;
+}
+
+.instructions ol {
+    margin-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.instructions strong {
+    color: #000000;
+}
+
+.instructions ul {
+    margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.instructions ul li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    color: #333333;
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #000000;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-hover);
+    font-weight: 600;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    border: 2px solid #000000;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .subtitle {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+    }
+
+    #classroom-grid {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .desk {
+        padding: 15px;
+        min-height: 60px;
+        font-size: 0.85em;
+    }
+
+    .btn {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .layout-controls {
+        flex-direction: column;
+    }
+
+    .input-group.inline {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .input-group.inline input {
+        width: 100%;
+    }
+
+    .classroom-controls {
+        flex-direction: column;
+    }
+
+    .selected-student p {
+        font-size: 1.5em;
+    }
+
+    .notification {
+        right: 10px;
+        left: 10px;
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .desk {
+        font-size: 0.75em;
+        padding: 10px;
+        min-height: 50px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .card {
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+
+    .btn,
+    .notification,
+    .instructions {
+        display: none;
+    }
+
+    #config-section,
+    #layout-section {
+        display: none;
+    }
+}

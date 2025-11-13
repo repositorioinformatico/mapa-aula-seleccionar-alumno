@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Clase - Selector Aleatorio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Organizador de Clase</h1>
+            <p class="subtitle">Gestiona la distribución de tu clase y selecciona alumnos aleatoriamente</p>
+        </header>
+
+        <!-- Sección de Configuración -->
+        <section id="config-section" class="card">
+            <h2>1. Configuración de Alumnos</h2>
+
+            <div class="input-group">
+                <label for="student-textarea">Lista de Alumnos (uno por línea):</label>
+                <textarea id="student-textarea" rows="10" placeholder="Escribe o pega los nombres de los alumnos, uno por línea...&#10;&#10;Ejemplo simple:&#10;Juan Pérez&#10;María García&#10;Carlos López&#10;&#10;Ejemplo con filas (línea en blanco = nueva fila):&#10;Juan Pérez&#10;María García&#10;&#10;Carlos López&#10;Ana Martínez&#10;&#10;Para mesas vacías: vacío, vacía, VACIO, mesa vacía, etc."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="student-file">O sube un archivo de texto (.txt):</label>
+                <input type="file" id="student-file" accept=".txt">
+            </div>
+
+            <button id="load-students-btn" class="btn btn-primary">Cargar Alumnos</button>
+            <div id="student-count" class="info-text"></div>
+        </section>
+
+        <!-- Sección de Layout -->
+        <section id="layout-section" class="card">
+            <h2>2. Configuración de Mesas</h2>
+
+            <div class="layout-controls">
+                <div class="input-group inline">
+                    <label for="rows-input">Filas:</label>
+                    <input type="number" id="rows-input" min="1" max="10" value="4">
+                </div>
+
+                <div class="input-group inline">
+                    <label for="cols-input">Columnas:</label>
+                    <input type="number" id="cols-input" min="1" max="10" value="6">
+                </div>
+
+                <button id="generate-layout-btn" class="btn btn-primary">Generar Distribución</button>
+            </div>
+        </section>
+
+        <!-- Sección de Visualización de la Clase -->
+        <section id="classroom-section" class="card" style="display: none;">
+            <h2>3. Distribución de la Clase</h2>
+
+            <div class="classroom-controls">
+                <button id="random-student-btn" class="btn btn-success">Seleccionar Alumno Aleatorio</button>
+                <button id="download-layout-btn" class="btn btn-secondary">Descargar Configuración</button>
+                <button id="load-layout-btn" class="btn btn-secondary">Cargar Configuración</button>
+                <input type="file" id="layout-file" accept=".txt" style="display: none;">
+            </div>
+
+            <div id="selected-student-display" class="selected-student" style="display: none;">
+                <h3>Alumno Seleccionado:</h3>
+                <p id="selected-student-name"></p>
+            </div>
+
+            <div id="classroom-grid"></div>
+        </section>
+
+        <!-- Instrucciones de Uso -->
+        <section class="card instructions">
+            <h3>Cómo usar:</h3>
+            <ol>
+                <li><strong>Carga los alumnos:</strong> Escribe o pega la lista de nombres en el área de texto, o sube un archivo .txt
+                    <ul>
+                        <li>Modo simple: Un nombre por línea (luego configuras filas y columnas manualmente)</li>
+                        <li>Modo automático: Usa líneas en blanco para separar filas (¡se genera automáticamente!)</li>
+                        <li>Escribe "vacío" o "vacía" para crear mesas vacías</li>
+                    </ul>
+                </li>
+                <li><strong>Configura las mesas:</strong> Define el número de filas y columnas (solo necesario en modo simple)</li>
+                <li><strong>Genera la distribución:</strong> Haz clic en "Generar Distribución" (automático si usas líneas en blanco)</li>
+                <li><strong>Reorganiza:</strong> Arrastra y suelta alumnos entre mesas para cambiar la distribución</li>
+                <li><strong>Selecciona alumnos:</strong> Usa el botón "Seleccionar Alumno Aleatorio" para destacar un estudiante</li>
+                <li><strong>Guarda y carga:</strong> Descarga la configuración para reutilizarla después</li>
+            </ol>
+        </section>
+    </div>
+
+    <script src="randomizer.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
