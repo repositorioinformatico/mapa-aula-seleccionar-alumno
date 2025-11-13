@@ -2,6 +2,12 @@
 
 Aplicación web estática para organizar la distribución de alumnos en una clase y seleccionar estudiantes de forma aleatoria.
 
+## 🌐 Acceso a la Aplicación
+
+**URL:** https://repositorioinformatico.github.io/class-layout-randomizer/
+
+La aplicación está disponible online, no requiere instalación ni dependencias. Simplemente abre la URL en tu navegador.
+
 ## Características
 
 - **Carga de alumnos**: Introduce nombres manualmente o carga un archivo .txt
@@ -75,10 +81,11 @@ class-layout-randomizer/
 
 ## Tecnologías utilizadas
 
-- HTML5
-- CSS3 (con variables CSS y animaciones)
-- JavaScript ES6+ (clases, async/await, módulos)
-- Sin dependencias externas
+- **HTML5**: Estructura de la aplicación
+- **CSS3**: Diseño responsive en blanco y negro con animaciones
+- **JavaScript ES6+**: Lógica de la aplicación (clases, async/await)
+- **GitHub Pages**: Hosting estático gratuito
+- **Sin dependencias externas**: No requiere npm, Node.js ni frameworks
 
 ## Aleatoriedad mejorada
 
@@ -88,35 +95,40 @@ La aplicación utiliza una clase personalizada `EnhancedRandomizer` que:
 - Implementa el algoritmo Fisher-Yates para mezclar arrays
 - Proporciona selección super-aleatoria con múltiples iteraciones
 
-## Despliegue en Netlify
+## Desarrollo Local
 
-### Opción 1: Drag & Drop
-1. Comprime todos los archivos en un ZIP
-2. Ve a [Netlify Drop](https://app.netlify.com/drop)
-3. Arrastra el ZIP a la zona indicada
+Si quieres modificar la aplicación localmente:
 
-### Opción 2: Git
-1. Crea un repositorio en GitHub
-2. Sube los archivos
-3. Conecta el repositorio en Netlify
-4. Despliega automáticamente
+1. **Clona el repositorio:**
+   ```bash
+   git clone https://github.com/repositorioinformatico/class-layout-randomizer.git
+   cd class-layout-randomizer
+   ```
 
-## Prueba local
+2. **Abre directamente en el navegador:**
+   - Simplemente abre `index.html` en tu navegador
+   - O usa un servidor local para mejor experiencia:
 
-Para probar en localhost, simplemente abre `index.html` en tu navegador, o usa un servidor local:
+   ```bash
+   # Con Python 3
+   python3 -m http.server 8000
 
-```bash
-# Con Python 3
-python -m http.server 8000
+   # Con PHP
+   php -S localhost:8000
+   ```
 
-# Con Node.js (http-server)
-npx http-server
+3. **Haz cambios y prueba:**
+   - Edita los archivos HTML, CSS o JS
+   - Recarga el navegador para ver los cambios
 
-# Con PHP
-php -S localhost:8000
-```
+4. **Sube cambios a GitHub:**
+   ```bash
+   git add .
+   git commit -m "Descripción de cambios"
+   git push origin main
+   ```
 
-Luego abre http://localhost:8000 en tu navegador.
+   Los cambios se publicarán automáticamente en GitHub Pages en 1-2 minutos.
 
 ## Licencia
 
