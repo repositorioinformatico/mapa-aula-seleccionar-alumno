@@ -4,7 +4,7 @@ Aplicación web estática para organizar la distribución de alumnos en una clas
 
 ## 🌐 Acceso a la Aplicación
 
-**URL:** https://repositorioinformatico.github.io/class-layout-randomizer/
+**URL:** https://repositorioinformatico.github.io/mapa-aula-seleccionar-alumno/
 
 La aplicación está disponible online, no requiere instalación ni dependencias. Simplemente abre la URL en tu navegador.
 
